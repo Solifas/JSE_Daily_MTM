@@ -18,6 +18,6 @@ public class AppDbContext : DbContext, IAppDbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=localhost;Database=JSEDailyMTM_DB;User Id=sa;Password=R#B0spWI%2$jtz95; Trusted_Connection=false;MultipleActiveResultSets=true; Persist Security Info=False;Encrypt=False");
+        optionsBuilder.UseSqlServer("Server=localhost;Database=JSEDailyMTM_DB;User Id=sa;Password=R; Trusted_Connection=false;MultipleActiveResultSets=true; Persist Security Info=False;Encrypt=False");
     }
 }
