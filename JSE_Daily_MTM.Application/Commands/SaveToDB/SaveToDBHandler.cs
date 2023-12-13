@@ -30,6 +30,7 @@ public class SaveToDBHandler : IRequestHandler<SaveToDBCommand>
                 if (dailyMTMs == null) continue;
                 _dbContext.DailyMTM.AddRange(dailyMTMs);
                 _dbContext.SaveChanges();
+
                 UpdateProcessedFileName(filePath);
             }
         }
