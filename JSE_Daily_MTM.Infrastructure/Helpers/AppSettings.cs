@@ -7,4 +7,5 @@ public class AppSettings : IAppSettings
     public DateTime? StartDate { get; set; }
     public DateTime? EndDate { get; set; }
     public string FilesPath { get; set; } = string.Empty;
+    public string ConnectionString { get; set; } = string.Empty;
 }
