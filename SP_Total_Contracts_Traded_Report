@@ -1,0 +1,25 @@
+CREATE PROCEDURE [dbo].[SP_Total_Contracts_Traded_Report]
+    @DateFrom DATE,
+    @DateTo DATE
+AS
+BEGIN
+    SELECT
+        [FileDate],
+        [Contract],
+        [ContractsTraded],
+        [PercentageOfTotalContractsTraded] = CAST([ContractsTraded] * 100.0 / SUM([ContractsTraded]) OVER () AS DECIMAL(10, 2))
+    FROM
+    (
+        SELECT
+            [FileDate],
+            [Contract],
+            [ContractsTraded]
+        FROM
+            [dbo].[DailyMTM]
+        WHERE
+            [FileDate] BETWEEN @DateFrom AND @DateTo
+    ) AS SubQuery
+END;
+
+-- EXEC [dbo].[SP_Total_Contracts_Traded_Report]
+-- @DateFrom = N'2021-01-04', @DateTo = N'2021-01-05'
