@@ -5,8 +5,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="EPPlus" Version="7.0.3" />
+  </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1001" />
+    <ProjectReference Include="..\JSE_Daily_MTM.Domain\JSE_Daily_MTM.Domain.csproj" />
+    <ProjectReference Include="..\JSE_Daily_MTM.infrastructure\JSE_Daily_MTM.Infrastructure.csproj" />
   </ItemGroup>
+
 </Project>

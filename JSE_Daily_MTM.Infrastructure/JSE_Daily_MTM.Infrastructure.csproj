@@ -7,6 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1001" /> -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0" />
+    <PackageReference Include="EPPlus" Version="7.0.3" />
+    <PackageReference Include="DotNetCore.NPOI" Version="1.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JSE_Daily_MTM.Domain\JSE_Daily_MTM.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Data\" />
   </ItemGroup>
   <ItemGroup>
